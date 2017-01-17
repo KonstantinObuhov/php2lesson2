@@ -8,7 +8,10 @@
     <title>Document</title>
 </head>
 <body>
-<form action="editor.php" method="post">
+<form action="/editor.php" method="post">
+    <?php if(!is_null($article->id)) { ?>
+        <input type="hidden" name="id" value="<?php echo $article->id; ?>">
+    <?php }?>
     <div>
         <lable for="title">Название статьи</lable>
         <input id="title" name="title" type="text" value="<?php echo $article->title;?>">
