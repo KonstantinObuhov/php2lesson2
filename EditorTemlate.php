@@ -8,7 +8,7 @@
     <title>Document</title>
 </head>
 <body>
-<form action="/editor.php" method="post">
+<form action="/save.php" method="post">
     <?php if (!$article->isNew()): ?>
         <input type="hidden" name="id" value="<?php echo $article->id; ?>">
     <?php endif; ?>
