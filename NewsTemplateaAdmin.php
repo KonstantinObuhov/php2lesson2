@@ -8,9 +8,7 @@
     <title>Document</title>
 </head>
 <body>
-<form action="" method="post">
-    <input type="hidden" name="action" value="add-upd">
-    <input type="hidden" name="id" value="<?php echo $article->id;?>">
+<form action="editor.php" method="post">
     <div>
         <lable for="title">Название статьи</lable>
         <input id="title" name="title" type="text" value="<?php echo $article->title;?>">
