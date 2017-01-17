@@ -11,9 +11,10 @@ class Db
     /*Конструктор - функция, которая при создании объекта автоматически вызывается*/
     public function __construct()
     {
-        $dsn = 'mysql:host=localhost;dbname=php2lesson1';
-        $user = 'root';
-        $password = '';
+        $config = new Config();
+        $dsn = 'mysql:host=' . $config->data['db']['host'] . ';dbname=' . $config->data['db']['dbname'];
+        $user = $config->data['db']['user'];
+        $password = $config->data['db']['password'];
         $this->dbh = new \PDO($dsn, $user, $password);
     }
     /*Метод query возвращает результаты запросов к бд или в прпостейшем случае ошибку при выполнении

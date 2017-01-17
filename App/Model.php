@@ -52,15 +52,16 @@ abstract class Model
         $sets = [];
         $ph_sets = [];
         $data = [];
+
         foreach ($this as $key => $value) {
-            $ph_sets[] = ':' . $key;
-            $sets[] = $key;
-            $data[':' . $key] = $value;
             if ('id' == $key) {
                 continue;
             }
-
+            $ph_sets[] = ':' . $key;
+            $sets[] = $key;
+            $data[':' . $key] = $value;
         }
+
         $db = new Db();
         $sql =  'INSERT INTO ' . static::$table . '
         (' . implode(',', $sets) .') VALUES (' . implode(',', $ph_sets) .')';
