@@ -21,13 +21,5 @@
     </div>
     <button type="submit">Отправить</button>
 </form>
-<?php //foreach ($news as $article) {?>
-<!--    <div class="article">-->
-<!--        <h3 class="title">--><?php //echo $article->title; ?><!--</h3>-->
-<!--        <div class="text">--><?php //echo $article->text; ?><!--</div>-->
-<!--        <a href="?id=--><?php //echo $article->id; ?><!--&action=del">Удалить</a>-->
-<!--        <a href="?id=--><?php //echo $article->id; ?><!--">Редактировать</a>-->
-<!--    </div>-->
-<?php //}?>
 </body>
 </html>
