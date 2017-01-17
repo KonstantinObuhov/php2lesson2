@@ -78,6 +78,11 @@ abstract class Model
         }
     }
 
+    public function isNew()
+    {
+        return null === $this->id;
+    }
+
     //Тут не знал нужно ли делать методы update() и insert() как protected?
     public function delete(): bool
     {

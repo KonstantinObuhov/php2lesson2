@@ -9,9 +9,9 @@
 </head>
 <body>
 <form action="/editor.php" method="post">
-    <?php if(!is_null($article->id)) { ?>
+    <?php if (!$article->isNew()): ?>
         <input type="hidden" name="id" value="<?php echo $article->id; ?>">
-    <?php }?>
+    <?php endif; ?>
     <div>
         <lable for="title">Название статьи</lable>
         <input id="title" name="title" type="text" value="<?php echo $article->title;?>">
