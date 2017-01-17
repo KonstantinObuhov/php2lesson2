@@ -12,5 +12,6 @@ require __DIR__ . '/autoload.php';
 //$data = \App\Models\Article::findById(1);
 //var_dump($data);
 //echo '<br>';
+
 $news = \App\Models\Article::getLatest(4);
 include __DIR__ . '/NewsTemplate.php';
