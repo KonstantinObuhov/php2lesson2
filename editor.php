@@ -3,10 +3,10 @@
 require __DIR__ . '/autoload.php';
 
 $news = \App\Models\Article::findAll ();
-$article = null;
+$article = new \App\Models\Article();
 
 if (isset( $_GET[ 'id' ])) {
-    ($article = \App\Models\Article::findById( $_GET[ 'id' ])) ? : header('Location: /editor.php');
+    $article = \App\Models\Article::findById( $_GET[ 'id' ]);
 }
 
 //if (isset( $_GET[ 'action' ]) && 'del' == $_GET[ 'action' ]) {
