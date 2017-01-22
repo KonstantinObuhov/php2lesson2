@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__ . '/autoload.php';
+require __DIR__ . '/../autoload.php';
 
 /*При вызове метода незнакомого класса запускается функция __autoload
 из файла autoload.php и делает require нужного нам класса
@@ -14,5 +14,5 @@ require __DIR__ . '/autoload.php';
 //var_dump($data);
 //echo '<br>';
 
-$news = \App\Models\Article::getLatest(4);
-include __DIR__ . '/NewsTemplate.php';
+$news = \App\Models\Article::findAll();
+include __DIR__ . '/NewsTemplatePanel.php';

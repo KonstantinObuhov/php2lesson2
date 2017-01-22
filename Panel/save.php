@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__ . '/autoload.php';
+require __DIR__ . '/../autoload.php';
 
 if (isset($_POST['id'])) {
     $article = \App\Models\Article::findById($_POST['id']);
@@ -10,4 +10,4 @@ if (isset($_POST['id'])) {
 $article->title = $_POST['title'];
 $article->text = $_POST['text'];
 $article->save();
-header('Location: /index.php');
+header('Location: /Panel/index.php');

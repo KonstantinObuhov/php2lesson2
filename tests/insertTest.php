@@ -5,6 +5,7 @@ require __DIR__.'/../autoload.php';
 //Ситуации когда объект получили через статический метод класса
 $article1 = \App\Models\Article::findById(1);
 
+
 $article1->title = 'test1 title1';
 $article1->text = 'test1 text1';
 assert(is_bool($article1->save()));

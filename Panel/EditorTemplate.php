@@ -8,7 +8,7 @@
     <title>Document</title>
 </head>
 <body>
-<form action="/save.php" method="post">
+<form action="/Panel/save.php" method="post">
     <?php if (!$article->isNew()): ?>
         <input type="hidden" name="id" value="<?php echo $article->id; ?>">
     <?php endif; ?>
@@ -17,7 +17,7 @@
         <input id="title" name="title" type="text" value="<?php echo $article->title;?>">
     </div>
     <div>
-        <lable for="text">Название статьи</lable>
+        <lable for="text">Текст статьи</lable>
         <textarea id="text" name="text" type="text"><?php echo $article->text;?></textarea>
     </div>
     <button type="submit">Отправить</button>
